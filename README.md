@@ -6,7 +6,7 @@ A simple, modern web application that generates custom wallpapers with your orga
 
 - Upload organization logo (PNG or SVG with transparent background)
 - Choose background color or gradient
-- Generate 1920 × 1080 wallpapers
+- Generate high-resolution wallpapers
 - Drag and drop file upload
 - Transparency detection
 - Modern dark theme interface
