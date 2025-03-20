@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Generator | Good Heart Tech</title>
+    <link rel="icon" href="https://graphics.goodhearttech.org/GHT/favicons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts - Noto Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <main class="container">
+        <h1><i class="fas fa-image"></i> Wallpaper Generator</h1>
+        
+        <div class="upload-section">
+            <div class="upload-box" id="dropZone">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Drag & drop your logo here or</p>
+                <input type="file" id="fileInput" accept=".png,.svg" hidden>
+                <div class="button-container">
+                    <button class="btn" onclick="document.getElementById('fileInput').click()">
+                        <i class="fas fa-upload"></i> Choose File
+                    </button>
+                </div>
+                <p class="file-info" id="fileInfo">Recommended: PNG or SVG with transparent background</p>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <div class="color-settings">
+                <div class="color-picker">
+                    <label for="primaryColor">Choose Background Color:</label>
+                    <input type="color" id="primaryColor" value="#394053">
+                </div>
+                
+                <div class="gradient-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="gradientToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>Enable Gradient</span>
+                </div>
+
+                <div class="color-picker" id="secondaryColorPicker" style="display: none;">
+                    <label for="secondaryColor">Secondary Color:</label>
+                    <input type="color" id="secondaryColor" value="#7189ff">
+                </div>
+            </div>
+
+            <button class="btn download-btn" id="downloadBtn" style="display: none;">
+                <i class="fas fa-download"></i> Download Wallpaper <span id="fileSize"></span>
+            </button>
+        </div>
+
+        <div class="preview-section">
+            <canvas id="previewCanvas" width="3840" height="2160" style="display: none;"></canvas>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="https://goodhearttech.org/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://graphics.goodhearttech.org/GHT-AllWhiteLogo-phishsite.png" alt="Good Heart Tech Logo">
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="https://goodhearttech.org/donate/" class="donate-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-heart"></i> Donate
+                </a>
+                <a href="https://github.com/Good-Heart-Technology/Wallpaper-Generator" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; <span id="currentYear"></span> Good Heart Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
