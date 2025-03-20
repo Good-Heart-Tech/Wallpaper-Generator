@@ -1,6 +1,6 @@
 # Wallpaper Generator
 
-A simple, modern web application that generates custom wallpapers with your organization's logo. Built by Good Heart Tech.
+A simple, modern web application that generates custom wallpapers with your organization's logo. Built by [Good Heart Tech](https://goodhearttech.org/).
 
 ## Features
 
@@ -31,6 +31,10 @@ This project is designed to be deployed on Cloudflare Pages. Simply connect your
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## Support Our Work
+
+[![Donate](https://img.shields.io/badge/Donate-Support%20Our%20Work-7189ff?style=for-the-badge&logo=heart)](https://goodhearttech.org/donate/)
+
 ## Credits
 
-Created by Good Heart Tech - [https://goodhearttech.org/](https://goodhearttech.org/) 
+Created by [Good Heart Tech](https://goodhearttech.org/) 
