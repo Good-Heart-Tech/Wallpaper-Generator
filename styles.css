@@ -114,7 +114,7 @@ h1 i {
 
 .color-picker input[type="color"]::-webkit-color-swatch {
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .gradient-toggle {
