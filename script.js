@@ -52,6 +52,9 @@ gradientToggle.addEventListener('change', (e) => {
     input.addEventListener('input', generateWallpaper);
 });
 
+// Add event listener for download button
+downloadBtn.addEventListener('click', downloadWallpaper);
+
 // File handling
 function handleFile(file) {
     if (!file) return;
