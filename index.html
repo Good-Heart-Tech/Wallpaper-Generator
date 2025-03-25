@@ -61,22 +61,25 @@
     </main>
 
     <footer>
+        <div class="footer-disclaimer">
+            This tool is for informational use only. Accuracy is not guaranteed, and it may become outdated or stop functioning. Use at your own discretion.
+        </div>
         <div class="footer-content">
             <div class="footer-logo">
                 <a href="https://goodhearttech.org/" target="_blank" rel="noopener noreferrer">
                     <img src="https://graphics.goodhearttech.org/GHT-AllWhiteLogo-phishsite.png" alt="Good Heart Tech Logo">
                 </a>
             </div>
-            <div class="footer-links">
-                <a href="https://goodhearttech.org/donate/" class="donate-btn" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-heart"></i> Donate
-                </a>
-                <a href="https://github.com/Good-Heart-Technology/Wallpaper-Generator" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
             <div class="footer-copyright">
                 <p>&copy; <span id="currentYear"></span> Good Heart Tech. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <button class="donate-btn" onclick="window.open('https://goodhearttech.org/donate/', '_blank')">
+                    <i class="fas fa-heart"></i> Donate
+                </button>
+                <a href="https://github.com/Good-Heart-Technology/Wallpaper-Generator" target="_blank" rel="noopener noreferrer" class="github-link">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
         </div>
     </footer>

@@ -224,9 +224,18 @@ input:checked + .slider:before {
 }
 
 footer {
-    background-color: var(--dark-blue);
-    padding: 2rem 0;
+    background-color: var(--rich-black);
+    padding: 1rem 0;
     margin-top: auto;
+}
+
+.footer-disclaimer {
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.9rem;
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
 }
 
 .footer-content {
@@ -234,52 +243,62 @@ footer {
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-logo {
+    flex-shrink: 0;
 }
 
 .footer-logo img {
     height: 40px;
     width: auto;
+    transition: transform 0.3s ease;
 }
 
-.footer-links {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.footer-links a {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--primary-purple);
-}
-
-.donate-btn {
-    background-color: var(--primary-purple);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    font-size: 1rem !important;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.donate-btn:hover {
-    background-color: #5a6ecc !important;
-    color: var(--white) !important;
+.footer-logo a:hover img {
+    transform: scale(1.1);
 }
 
 .footer-copyright {
     color: var(--gray);
     font-size: 0.9rem;
-    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.donate-btn {
+    background-color: #7189ff;
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.donate-btn:hover {
+    background-color: #5a6ecc;
+}
+
+.github-link {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: var(--primary-purple);
 }
 
 @media (max-width: 768px) {
@@ -293,5 +312,15 @@ footer {
 
     .color-settings {
         flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-disclaimer {
+        padding: 0.5rem 1rem;
     }
 } 
