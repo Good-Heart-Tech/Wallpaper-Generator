@@ -23,17 +23,17 @@ let uploadedLogo = null;
 // Event Listeners
 dropZone.addEventListener('dragover', (e) => {
     e.preventDefault();
-    dropZone.style.borderColor = 'var(--primary-purple)';
+    dropZone.style.borderColor = 'var(--ght-palette-hudu-primary)';
 });
 
 dropZone.addEventListener('dragleave', (e) => {
     e.preventDefault();
-    dropZone.style.borderColor = 'var(--gray)';
+    dropZone.style.borderColor = '';
 });
 
 dropZone.addEventListener('drop', (e) => {
     e.preventDefault();
-    dropZone.style.borderColor = 'var(--gray)';
+    dropZone.style.borderColor = '';
     const file = e.dataTransfer.files[0];
     handleFile(file);
 });
@@ -60,8 +60,8 @@ function handleFile(file) {
     if (!file) return;
 
     if (!['image/png', 'image/svg+xml'].includes(file.type)) {
-        fileInfo.textContent = 'Please upload a PNG or SVG file';
-        fileInfo.style.color = '#ff4444';
+        fileInfo.textContent = 'Please upload a PNG or SVG file.';
+        fileInfo.className = 'file-info file-info-alert';
         return;
     }
 
@@ -81,7 +81,7 @@ function handleFile(file) {
     reader.readAsDataURL(file);
 
     fileInfo.textContent = `File selected: ${file.name}`;
-    fileInfo.style.color = 'var(--gray)';
+    fileInfo.className = 'file-info';
 }
 
 // Check for transparency in PNG
@@ -104,8 +104,8 @@ function checkTransparency(img) {
     }
     
     if (!hasTransparency) {
-        fileInfo.textContent = 'Warning: Image does not have a transparent background';
-        fileInfo.style.color = '#ffaa00';
+        fileInfo.textContent = 'Heads up: this image does not have a transparent background.';
+        fileInfo.className = 'file-info file-info-alert';
     }
 }
 

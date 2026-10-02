@@ -1,11 +1,4 @@
-:root {
-    --primary-purple: #7189ff;
-    --dark-blue: #394053;
-    --gray: #808080;
-    --light-blue: #a0ddff;
-    --rich-black: #091D20;
-    --white: #FFFFFF;
-}
+/* Colors and fonts come from ght-variables.css (Good Heart Tech brand kit). */
 
 * {
     margin: 0;
@@ -14,9 +7,9 @@
 }
 
 body {
-    font-family: 'Noto Sans', sans-serif;
-    background-color: var(--rich-black);
-    color: var(--white);
+    font-family: var(--ght-font-family-body);
+    background-color: var(--ght-palette-white);
+    color: var(--ght-palette-charcoal);
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
@@ -33,13 +26,13 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--white);
+    color: var(--ght-palette-rich-black);
     font-size: 2.5rem;
 }
 
 h1 i {
     margin-right: 0.5rem;
-    color: var(--primary-purple);
+    color: var(--ght-palette-hudu-primary);
 }
 
 .upload-section {
@@ -47,22 +40,22 @@ h1 i {
 }
 
 .upload-box {
-    border: 2px dashed var(--gray);
+    border: 2px dashed var(--ght-palette-hudu-primary);
     border-radius: 10px;
     padding: 2rem;
     text-align: center;
-    background-color: var(--dark-blue);
+    background-color: color-mix(in srgb, var(--ght-palette-hudu-light) 30%, white);
     transition: border-color 0.3s ease;
     cursor: pointer;
 }
 
 .upload-box:hover {
-    border-color: var(--primary-purple);
+    border-color: var(--ght-palette-rich-black);
 }
 
 .upload-box i {
     font-size: 3rem;
-    color: var(--primary-purple);
+    color: var(--ght-palette-hudu-primary);
     margin-bottom: 1rem;
 }
 
@@ -74,8 +67,16 @@ h1 i {
 
 .file-info {
     margin-top: 1rem;
-    color: var(--gray);
+    color: var(--ght-palette-charcoal);
     font-size: 0.9rem;
+}
+
+.file-info-alert {
+    font-weight: var(--ght-font-weight-semibold);
+    color: var(--ght-palette-rich-black);
+    border-left: 4px solid var(--ght-palette-hudu-primary);
+    padding-left: 0.75rem;
+    display: inline-block;
 }
 
 .settings-section {
@@ -102,7 +103,7 @@ h1 i {
 .color-picker input[type="color"] {
     width: 50px;
     height: 50px;
-    border: 2px solid var(--white);
+    border: 2px solid var(--ght-palette-charcoal);
     border-radius: 8px;
     background: none;
     cursor: pointer;
@@ -144,7 +145,7 @@ h1 i {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--gray);
+    background-color: var(--ght-palette-neutral);
     transition: .4s;
 }
 
@@ -155,12 +156,12 @@ h1 i {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: var(--white);
+    background-color: var(--ght-palette-white);
     transition: .4s;
 }
 
 input:checked + .slider {
-    background-color: var(--primary-purple);
+    background-color: var(--ght-palette-hudu-primary);
 }
 
 input:checked + .slider:before {
@@ -176,14 +177,14 @@ input:checked + .slider:before {
 }
 
 .btn {
-    background-color: var(--primary-purple);
-    color: var(--white);
+    background-color: var(--ght-palette-primary);
+    color: var(--ght-palette-rich-black);
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: var(--ght-font-weight-semibold);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,15 +194,17 @@ input:checked + .slider:before {
 
 .btn i {
     font-size: 1.1rem;
-    color: var(--white);
+    color: inherit;
 }
 
 .btn:hover {
-    background-color: #5a6ecc;
+    background-color: var(--ght-palette-hudu-primary);
+    color: var(--ght-palette-white);
 }
 
 .btn:disabled {
-    background-color: var(--gray);
+    background-color: var(--ght-palette-hudu-light);
+    color: var(--ght-palette-rich-black);
     cursor: not-allowed;
 }
 
@@ -220,85 +223,8 @@ input:checked + .slider:before {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: var(--rich-black);
-    padding: 1rem 0;
-    margin-top: auto;
-}
-
-.footer-disclaimer {
-    text-align: center;
-    color: var(--gray);
-    font-size: 0.9rem;
-    padding: 0.5rem 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 1rem;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.footer-logo {
-    flex-shrink: 0;
-}
-
-.footer-logo img {
-    height: 40px;
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.footer-logo a:hover img {
-    transform: scale(1.1);
-}
-
-.footer-copyright {
-    color: var(--gray);
-    font-size: 0.9rem;
-}
-
-.footer-links {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.donate-btn {
-    background-color: #7189ff;
-    color: var(--white);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background-color 0.3s ease;
-}
-
-.donate-btn:hover {
-    background-color: #5a6ecc;
-}
-
-.github-link {
-    color: var(--white);
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.github-link:hover {
-    color: var(--primary-purple);
+    border: 1px solid var(--ght-palette-hudu-light);
+    box-shadow: 0 4px 6px rgba(9, 29, 32, 0.15);
 }
 
 @media (max-width: 768px) {
@@ -313,14 +239,22 @@ footer {
     .color-settings {
         flex-direction: column;
     }
+}
 
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
+.btn:focus-visible, .upload-box:focus-visible, input:focus-visible + .slider, .color-picker input:focus-visible {
+    outline: 3px solid var(--ght-palette-primary);
+    outline-offset: 3px;
+}
 
-    .footer-disclaimer {
-        padding: 0.5rem 1rem;
-    }
-} 
+/* Good Heart Tech standard app footer, light mode.
+   Donate button is white on huduPrimary (4.7:1), which passes AA for its small label. */
+.ght-footer { width: 100%; margin-top: auto; padding: 22px 24px 26px; text-align: center; background: color-mix(in srgb, var(--ght-palette-hudu-light) 30%, white); border-top: 1px solid var(--ght-palette-hudu-light); color: var(--ght-palette-charcoal); }
+.ght-footer-note { max-width: 52rem; margin: 0 auto 16px; font-size: .8125rem; font-style: italic; }
+.ght-footer-row { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.ght-footer-logo img { display: block; height: 30px; width: auto; }
+.ght-footer-copy { font-size: .9375rem; }
+.ght-footer-donate { display: inline-flex; line-height: 1.2; align-items: center; gap: 8px; padding: 9px 22px; border-radius: 8px; background: var(--ght-palette-hudu-primary); color: var(--ght-palette-white); font-weight: var(--ght-font-weight-semibold); text-decoration: none; }
+.ght-footer-donate:hover { background: var(--ght-palette-rich-black); color: var(--ght-palette-white); }
+.ght-footer-github { display: inline-flex; color: var(--ght-palette-rich-black); }
+.ght-footer-github:hover { color: var(--ght-palette-hudu-primary); }
+.ght-footer a:focus-visible { outline: 3px solid var(--ght-palette-primary); outline-offset: 3px; }

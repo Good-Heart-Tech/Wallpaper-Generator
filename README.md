@@ -9,7 +9,7 @@ A simple, modern web application that generates custom wallpapers with your orga
 - Generate high-resolution wallpapers
 - Drag and drop file upload
 - Transparency detection
-- Modern dark theme interface
+- Light theme that follows the Good Heart Tech brand
 - Mobile responsive design
 
 ## Usage
