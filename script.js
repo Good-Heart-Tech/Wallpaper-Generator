@@ -157,7 +157,7 @@ function generateWallpaper() {
     );
 
     // Show download button and update file size
-    downloadBtn.style.display = 'block';
+    downloadBtn.style.display = 'inline-flex';
     updateFileSize();
 }
 

@@ -7,22 +7,21 @@
     <link rel="icon" href="https://graphics.goodhearttech.org/GHT/favicons/favicon.svg" type="image/svg+xml">
     <meta name="color-scheme" content="light">
     <link rel="stylesheet" href="ght-variables.css">
+    <link rel="stylesheet" href="ght-buttons.css">
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <main class="container">
-        <h1><i class="fas fa-image" aria-hidden="true"></i> Wallpaper Generator</h1>
+        <h1><svg class="title-icon" aria-hidden="true" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg> Wallpaper Generator</h1>
         
         <div class="upload-section">
             <div class="upload-box" id="dropZone">
-                <i class="fas fa-cloud-upload-alt"></i>
+                <svg class="upload-icon" aria-hidden="true" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 0 0 .5-8.97A6 6 0 0 0 6.5 9.5 4 4 0 0 0 7 19"/><path d="M12 12v8"/><path d="M8.5 15.5L12 12l3.5 3.5"/></svg>
                 <p>Drag & drop your logo here or</p>
                 <input type="file" id="fileInput" accept=".png,.svg" hidden>
                 <div class="button-container">
-                    <button class="btn" onclick="document.getElementById('fileInput').click()">
-                        <i class="fas fa-upload"></i> Choose File
+                    <button class="ght-btn btn" onclick="document.getElementById('fileInput').click()">
+                        <svg class="ght-icon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg> Choose file
                     </button>
                 </div>
                 <p class="file-info" id="fileInfo">Recommended: PNG or SVG with transparent background</p>
@@ -50,8 +49,8 @@
                 </div>
             </div>
 
-            <button class="btn download-btn" id="downloadBtn" style="display: none;">
-                <i class="fas fa-download"></i> Download Wallpaper <span id="fileSize"></span>
+            <button class="ght-btn ght-btn--primary btn download-btn" id="downloadBtn" style="display: none;">
+                <svg class="ght-icon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg> Download wallpaper <span id="fileSize"></span>
             </button>
         </div>
 

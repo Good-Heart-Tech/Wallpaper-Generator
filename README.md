@@ -17,7 +17,7 @@ A simple, modern web application that generates custom wallpapers with your orga
 1. Upload your organization's logo (PNG or SVG format recommended for transparency support)
 2. Choose a background color
 3. Optionally enable gradient mode and choose a secondary color
-5. Click "Download Wallpaper" to save your creation
+5. Click "Download wallpaper" to save your creation
 
 ## Development
 
