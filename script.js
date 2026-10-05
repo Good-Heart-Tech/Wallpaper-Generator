@@ -23,7 +23,7 @@ let uploadedLogo = null;
 // Event Listeners
 dropZone.addEventListener('dragover', (e) => {
     e.preventDefault();
-    dropZone.style.borderColor = 'var(--ght-palette-hudu-primary)';
+    dropZone.style.borderColor = 'var(--ght-palette-primary-dark)';
 });
 
 dropZone.addEventListener('dragleave', (e) => {
